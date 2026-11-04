@@ -31,7 +31,7 @@ Projede Kaggle'dan alınan ABD opioid reçete ve ölüm verilerini içeren veri 
 - Veri bütünlüğünü bozan satırlar çıkarılmıştır.
 
 ### Analize Hazırlama
-- Modelde bağımsız değişken (X) Crude Rate olarak seçilmiştir.  
+- Modelde bağımsız değişkenler (X) olarak Year, Population, Deaths, Crude Rate ve Crude Rate'in alt/üst %95 güven aralığı değerleri (toplam 6 değişken) seçilmiştir.
 - Modelde bağımlı değişken (y) Prescriptions Dispensed olarak belirlenmiştir.
 
 ---
@@ -46,7 +46,7 @@ Bu çalışmada:
 - Lineer Regresyon modeliyle reçete tahmini yapılmıştır.  
 
 **Tahmin edilen değer (y):** Prescriptions  
-**Bağımsız değişken (X):** Crude Rate  
+**Bağımsız değişkenler (X):** Year, Population, Deaths, Crude Rate, Crude Rate alt ve üst güven aralığı sınırları
 
 ---
 
@@ -119,9 +119,11 @@ Fakat asıl güçlü değişken grafikte github reposunda mevcuttur.
 
 ![tablo](ss4.png)
 
+> Not: Grafik yalnızca Crude Rate ekseninde çizilmiştir; model altı bağımsız değişkeni birlikte kullanır.
+
 - Örnek: 151.19 ama asıl değer 149.00 → 2.19’luk bir sapma var.
 - Modelin R² skoru = 0.91
-- Ortalama kare hatası (MSE): 98.33 civarıdır.
+- Ortalama kare hatası (MSE): 98.39 civarıdır.
 
 **Bu kısımların sonuçları hemen altta metriklerin ne olduğu ve ne işe yaradığı bilgilerini verdik.**
 
