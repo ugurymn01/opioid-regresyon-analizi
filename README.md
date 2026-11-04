@@ -6,7 +6,7 @@ Bu projede ABD’deki ilaç reçeteleri ve ölümlerine ait istatistiksel verile
 
 ## 1. Kullanılan Veri Seti
 
-Projede kullanılan veri seti (datam.csv) aşağıdaki değişkenleri içermektedir:
+Projede Kaggle'dan alınan ABD opioid reçete ve ölüm verilerini içeren veri seti (`datam.csv`) aşağıdaki değişkenleri içermektedir:
 
 - Year: Yıl bilgisi  
 - State: Eyalet  
@@ -84,13 +84,14 @@ Bu bölümde Jupyter Notebook’taki beş grafik yer almaktadır.
 ---
 
 ### 5.2 Eyaletlere Göre Ortalama Ölüm Sayısı
-- yıllara göre reçete sayısını anladıktan sonra bir başka sütun olan eyaletlere göe ölüm sayılarını verip fikir oluşturmak istedik.
+- yıllara göre reçete sayısını anladıktan sonra bir başka sütun olan eyaletlere göre ölüm sayılarını verip fikir oluşturmak istedik.
 
 ![tablo](ss2.png)
+
 ---
 
 ### 5.3 Korelasyon Matrisi
-- İlk başta bu grafiği kullanma amacım, veri setindeki sayısal değişkenler arasında bir doğrusalılık var mı? Varsa bunun gücünü ve yönünü göstermektir.
+- İlk başta bu grafiği kullanma amacım, veri setindeki sayısal değişkenler arasında bir doğrusallık var mı? Varsa bunun gücünü ve yönünü göstermektir.
 Bu tabloda güçlü olan korelasyonlar bej tonu, daha az güçlü olanlar açık renk ile gösterilmiştir.
 
 ![tablo](ss3.png)
@@ -101,10 +102,11 @@ Bu tabloda güçlü olan korelasyonlar bej tonu, daha az güçlü olanlar açık
 - Grafikteki tonlara bakıldığında Crude Rate ve Prescriptions arasında doğrusal bir ilişki vardır.
 
 Fakat asıl güçlü değişken grafikte github reposunda mevcuttur.
+
 ---
 
 ### 5.4 Gerçek ve Tahmin Değer Karşılaştırma Grafiği
-- Ypatığımız tahminler ve gerçek değerleri tek çizgi halinde kullanıp lineer bir tablo üzerinde göstermek istedik.
+- Yaptığımız tahminler ve gerçek değerleri tek çizgi halinde kullanıp lineer bir tablo üzerinde göstermek istedik.
 
 ![tablo](ss5.png)
 
@@ -119,9 +121,10 @@ Fakat asıl güçlü değişken grafikte github reposunda mevcuttur.
 
 - Örnek: 151.19 ama asıl değer 149.00 → 2.19’luk bir sapma var.
 - Modelin R² skoru = 0.91
-- Ortak bir kare hatası (MSE): 98.33 civarıdır.
+- Ortalama kare hatası (MSE): 98.33 civarıdır.
 
 **Bu kısımların sonuçları hemen altta metriklerin ne olduğu ve ne işe yaradığı bilgilerini verdik.**
+
 ---
 
 ## 6. Model Performans Metrikleri
@@ -133,3 +136,11 @@ Notebook içerisinde hesaplanan değerlendirme metrikleri:
 
 ---
 
+## 7. Kurulum ve Çalıştırma
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+Veri seti repoda `data/datam.csv` olarak bulunur. Analizin adım adım hali `opioid_regresyon_analizi.ipynb` notebook'unda yer alır.

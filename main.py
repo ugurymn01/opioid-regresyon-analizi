@@ -13,7 +13,7 @@ plt.style.use("ggplot")
 
 
 # 1) datam.csv
-df = pd.read_csv(r"C:\Users\YAMAN\Desktop\data\data\datam.csv")
+df = pd.read_csv("data/datam.csv")
 
 # 2) eksik ve bozuk veri temizleme kısmı
 df = df.drop(columns=["index"], errors="ignore")
